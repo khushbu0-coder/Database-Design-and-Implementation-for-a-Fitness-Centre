@@ -1,0 +1,9 @@
+Brief Description About Relational Model:
+Firstly, the table is in 0NF form , as it contains the multivalued attributes such as Amenities, Reviews and References.
+
+To convert it into 1 NF , we have created separate linking tables for multivalued attributes .
+As ,Amenities table  has no PK so AmenitiesGymID will become PK in this table that points toward GymID in base table .Similarly ,  Review table has no PK so ReviewCoachID will become PK in this table that points toward CoachID in base table .
+Besides this , References table has its own PK (Client ID) so Coach ID will become FK in this table and it will also points towards the CoachID of base table.
+To convert it into 2NF , we will remove partial dependencies , so new tables will be created having full dependencies which are Location table , Gym table , Classes table , Coaches Table, Certificates table , Courses Table.
+Moreover , Certificates is an associative entity as it has one to many relationship towards  both Coaches and Courses . 
+To be in 3NF , the table should be free of transitive dependencies , as this table has no transitive dependencies so it is already in 3NF form .
